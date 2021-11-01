@@ -1,10 +1,12 @@
 # java_message_service
 
 1) Start Zookeeper node instance
-> bin/zookeeper-server-start.sh config/zookeeper.properties
+linux > bin/zookeeper-server-start.sh config/zookeeper.properties
+windows > bin\windows\zookeeper-server-start.bat config\zookeeper.properties
 
 2) Start Kafka server
-> bin/kafka-server-start.sh config/server.properties
+linux > bin/kafka-server-start.sh config/server.properties
+windows > bin\windows\kafka-server-start.bat config\server.properties
 
 3) Once kafka service is up create the kafka topic
 > bin/kafka-topic.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic kafka-message-topic
